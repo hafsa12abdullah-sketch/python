@@ -1,0 +1,497 @@
+Bilkul. Agar aap **Python bilkul start se** seekhna chahte ho, to main aapko basic se step-by-step codes de raha hoon. Inhein ek ek karke practice karo.
+
+## 1. Python mein pehla program
+
+```python
+print("Hello World")
+```
+
+Output:
+
+```text
+Hello World
+```
+
+## 2. Comments
+
+```python
+# Ye ek comment hai
+print("Hello")
+```
+
+## 3. Variables
+
+```python
+name = "Ali"
+age = 20
+city = "Karachi"
+
+print(name)
+print(age)
+print(city)
+```
+
+## 4. Different Data Types
+
+```python
+name = "Ali"       # String
+age = 20           # Integer
+price = 99.5       # Float
+is_student = True  # Boolean
+
+print(type(name))
+print(type(age))
+print(type(price))
+print(type(is_student))
+```
+
+## 5. User se input lena
+
+```python
+name = input("Apna naam likho: ")
+
+print("Hello", name)
+```
+
+Number input:
+
+```python
+age = int(input("Apni age likho: "))
+
+print("Aap ki age hai:", age)
+```
+
+Decimal:
+
+```python
+price = float(input("Price enter karo: "))
+
+print(price)
+```
+
+## 6. Basic Math
+
+```python
+a = 10
+b = 3
+
+print(a + b)   # Addition
+print(a - b)   # Subtraction
+print(a * b)   # Multiplication
+print(a / b)   # Division
+print(a // b)  # Floor division
+print(a % b)   # Remainder
+print(a ** b)  # Power
+```
+
+## 7. Comparison Operators
+
+```python
+a = 10
+b = 20
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+```
+
+## 8. If / Else
+
+```python
+age = int(input("Age: "))
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Under 18")
+```
+
+## 9. If / Elif / Else
+
+```python
+marks = int(input("Marks: "))
+
+if marks >= 80:
+    print("A Grade")
+elif marks >= 60:
+    print("B Grade")
+elif marks >= 40:
+    print("C Grade")
+else:
+    print("Fail")
+```
+
+## 10. AND / OR / NOT
+
+```python
+age = 20
+has_card = True
+
+if age >= 18 and has_card:
+    print("Allowed")
+```
+
+```python
+age = 20
+student = False
+
+if age < 18 or student:
+    print("Discount")
+```
+
+## 11. String Basics
+
+```python
+name = "Pakistan"
+
+print(name[0])
+print(name[1])
+print(name[-1])
+print(len(name))
+```
+
+String methods:
+
+```python
+text = "hello world"
+
+print(text.upper())
+print(text.lower())
+print(text.title())
+print(text.capitalize())
+```
+
+Replace:
+
+```python
+text = "I like Java"
+
+text = text.replace("Java", "Python")
+
+print(text)
+```
+
+## 12. f-string
+
+```python
+name = "Ali"
+age = 20
+
+print(f"My name is {name} and I am {age} years old.")
+```
+
+## 13. List
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits)
+print(fruits[0])
+print(fruits[1])
+```
+
+List mein item add:
+
+```python
+fruits = ["Apple", "Banana"]
+
+fruits.append("Mango")
+
+print(fruits)
+```
+
+Remove:
+
+```python
+fruits.remove("Banana")
+
+print(fruits)
+```
+
+## 14. List Loop
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+## 15. Tuple
+
+```python
+colors = ("Red", "Green", "Blue")
+
+print(colors[0])
+print(colors[1])
+```
+
+Tuple ko normally change nahi kar sakte.
+
+## 16. Set
+
+```python
+numbers = {1, 2, 3, 3, 4}
+
+print(numbers)
+```
+
+Set duplicate values automatically remove karta hai.
+
+## 17. Dictionary
+
+```python
+student = {
+    "name": "Ali",
+    "age": 20,
+    "city": "Karachi"
+}
+
+print(student["name"])
+print(student["age"])
+```
+
+New value:
+
+```python
+student["marks"] = 85
+
+print(student)
+```
+
+## 18. For Loop
+
+```python
+for i in range(5):
+    print(i)
+```
+
+Output:
+
+```text
+0
+1
+2
+3
+4
+```
+
+1 se 10:
+
+```python
+for i in range(1, 11):
+    print(i)
+```
+
+## 19. While Loop
+
+```python
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+```
+
+## 20. Break
+
+```python
+for i in range(1, 11):
+
+    if i == 5:
+        break
+
+    print(i)
+```
+
+## 21. Continue
+
+```python
+for i in range(1, 6):
+
+    if i == 3:
+        continue
+
+    print(i)
+```
+
+## 22. Function
+
+```python
+def hello():
+    print("Hello!")
+
+hello()
+```
+
+Function with parameter:
+
+```python
+def greet(name):
+    print("Hello", name)
+
+greet("Ali")
+greet("Ahmed")
+```
+
+Return:
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+```
+
+## 23. Exception Handling
+
+```python
+try:
+    number = int(input("Number: "))
+    print(number)
+
+except ValueError:
+    print("Please enter a valid number.")
+```
+
+## 24. File mein write karna
+
+```python
+file = open("test.txt", "w")
+
+file.write("Hello Python")
+
+file.close()
+```
+
+Better method:
+
+```python
+with open("test.txt", "w") as file:
+    file.write("Hello Python")
+```
+
+## 25. File read karna
+
+```python
+with open("test.txt", "r") as file:
+    data = file.read()
+
+print(data)
+```
+
+## 26. Import
+
+```python
+import math
+
+print(math.sqrt(25))
+print(math.pi)
+```
+
+Random:
+
+```python
+import random
+
+number = random.randint(1, 10)
+
+print(number)
+```
+
+---
+
+# 🔥 Sabse important practice programs
+
+In basic concepts ke baad ye programs khud banana:
+
+### Program 1 — Even/Odd
+
+```python
+number = int(input("Number enter karo: "))
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+### Program 2 — Calculator
+
+```python
+a = float(input("First number: "))
+operator = input("Operator (+, -, *, /): ")
+b = float(input("Second number: "))
+
+if operator == "+":
+    print(a + b)
+
+elif operator == "-":
+    print(a - b)
+
+elif operator == "*":
+    print(a * b)
+
+elif operator == "/":
+    print(a / b)
+
+else:
+    print("Invalid operator")
+```
+
+### Program 3 — Multiplication Table
+
+```python
+number = int(input("Number: "))
+
+for i in range(1, 11):
+    print(number, "x", i, "=", number * i)
+```
+
+### Program 4 — Sum 1 to 100
+
+```python
+total = 0
+
+for i in range(1, 101):
+    total += i
+
+print(total)
+```
+
+### Program 5 — Password Check
+
+```python
+password = input("Password: ")
+
+if password == "12345":
+    print("Login successful")
+else:
+    print("Wrong password")
+```
+
+### Program 6 — Simple Number Guessing Game
+
+```python
+import random
+
+secret = random.randint(1, 10)
+
+guess = int(input("1 se 10 ke darmiyan number guess karo: "))
+
+if guess == secret:
+    print("Correct!")
+else:
+    print("Wrong! Number was:", secret)
+```
+
+### Python seekhne ka order
+
+**Print → Variables → Data Types → Input → Operators → If/Else → Strings → Lists → Tuples → Sets → Dictionaries → For Loop → While Loop → Functions → Exceptions → Files → Modules → OOP**
+
+Agar aap **zero se Python seekh rahe ho**, to pehle upar ke **1–10 topics** achhi tarah practice karo; phir loops aur functions par jao.
